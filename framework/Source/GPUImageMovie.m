@@ -528,6 +528,11 @@ static CVReturn renderCallback(CVDisplayLinkRef displayLink,
         return 0.f;
     }
 }
+- (float)progressSeconds
+{
+    float current = processingFrameTime.value * 1.0f / processingFrameTime.timescale;
+    return current;
+}
 
 - (void)processMovieFrame:(CVPixelBufferRef)movieFrame withSampleTime:(CMTime)currentSampleTime
 {

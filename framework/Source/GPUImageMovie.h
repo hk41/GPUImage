@@ -34,6 +34,7 @@
     This property is not key-value observable.
  */
 @property(readonly, nonatomic) float progress;
+@property(readonly, nonatomic) float progressSeconds;
 
 /** This is used to send the delete Movie did complete playing alert
  */
